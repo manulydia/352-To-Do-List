@@ -1,0 +1,41 @@
+<!-- 
+    This html document is designed for a user to input information 
+    to create an account. This information would be recorded in a database 
+    and used for login purposes.
+
+    Lydia Manu & Alison Ueki
+    4/24/2023
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up Form</title>
+        <link rel="stylesheet" href="signup.css">
+    </head>
+    <body>
+        <div class="signupbox">
+            <h1>Create an Account</h1>
+            <form method="POST" id="signupForm">
+                <p>Please fill out the following:</p>
+                    <input type="text" name="ifirstname" placeholder="first name" required>
+                    <input type="text" name="ilastname" placeholder="last name" required>
+                    <input type="email" name="iemail" placeholder="email address" required>
+                    <input type="text" name="iusername" placeholder="username" required>
+                    <input type="password" name="ipassword" placeholder="password" required>
+                    <input type="password" name="iconfirmpassword" placeholder="confirm password" required>
+                    <input type="submit" name="" value="Sign Up" onclick="nextPage()" >
+                <a href="login.html">Already have an account?</a>
+            </form>
+        </div>
+    </body>
+</html>
+
+<!-- Script to go onto the next page when clicked on the sign up button -->
+<script>
+    function nextPage() {
+        var url = "main.html";
+        window.location.href = url;
+    }
+</script>

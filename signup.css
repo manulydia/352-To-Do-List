@@ -1,0 +1,94 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background-color: #e6eBed;
+    background-position: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+.signupbox
+{
+    width: 320px;
+    height: 520px;
+    background: #ffffff;
+    color: #666666;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 30px 30px;
+    border-radius: 25px;
+}
+
+h1
+{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.signupbox p
+{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.signupbox input
+{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.signupbox input[type="text"], input[type="password"], input[type="email"]
+{
+    border: none;
+    border: 1px solid #666666;
+    border-radius: 5px;
+    background: transparent;
+    outline: none;
+    padding: 12px;
+    color: #666666;
+    font-size: 16x;
+}
+
+.signupbox input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: rgb(0, 94, 209);
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.signupbox input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: rgb(0, 143, 209);
+    color: #ffffff;
+}
+
+.signupbox a
+{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+}
+
+.signupbox a:hover
+{
+    color: rgb(0, 94, 209);
+}
+
+.loginbox p
+{
+    margin-bottom: 5px;
+}

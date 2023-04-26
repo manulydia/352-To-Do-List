@@ -1,0 +1,40 @@
+<!--
+    Login html document is designed for a user to input username and 
+    password to login to main application. This information will be 
+    checked for validation (security).
+
+    Lydia Manu & Alison Ueki
+    4/24/2023
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login Form</title>
+        <link rel="stylesheet" href="login.css">
+    </head>
+    <body>
+        <div class="loginbox">
+            <h1>Login Here</h1>
+            <form method="POST" id="loginForm">
+            <p>username</p>
+                <input type="text" name="username" placeholder="enter username" required>
+            <p>password</p>
+                <input type="password" name="password" placeholder="enter password" required>
+                <!-- can change the onclick -->
+                <input type="submit" name="" value="Login" onclick="nextPage()">
+                <a href="">Lost your password?</a>
+                <br>
+                <a href="signup.html">Don't have an account?</a>
+            </form>
+        </div>
+    </body>
+</html>
+
+<script>
+    function nextPage() {
+        var url = "main.html";
+        window.location.href = url;
+    }
+</script>
