@@ -11,7 +11,7 @@
   <body>
     <header>
       <!-- Header content goes here -->
-     <div class="header">
+      <div class="header">
         <h1>Lazy Track</h1>
       </div>
       <div class="user-profile">
@@ -28,30 +28,32 @@
     </main>
     <aside>
       <!-- Sidebar or additional content goes here -->
-      <button class="sidebar-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <script>
-        const sidebarToggle = document.querySelector(".sidebar-toggle");
-        const sidebar = document.querySelector(".sidebar");
-
-        sidebarToggle.addEventListener("click", () => {
-          sidebar.classList.toggle("hidden");
-        });
-      </script>
-      <div class="sidebar">
-        <ul>
-          <li><a href="#">Settings</a></li>
-          <li><a href="#">Feedback</a></li>
-          <li><a href="#">Privacy</a></li>
-          <li><a href="#">Logout</a></li>
-        </ul>
-      </div>
+      <aside>
+        <button class="sidebar-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="sidebar">
+          <ul>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Feedback</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Logout</a></li>
+          </ul>
+        </div>
+      </aside>
     </aside>
     <footer>
       <!-- Footer content goes here -->
     </footer>
+    <script>
+      const sidebarToggle = document.querySelector(".sidebar-toggle");
+      const sidebar = document.querySelector(".sidebar");
+
+      sidebarToggle.addEventListener("click", () => {
+        sidebar.classList.toggle("hidden");
+      });
+    </script>
   </body>
 </html>
