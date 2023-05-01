@@ -1,34 +1,46 @@
+<!--
+    Main html document is designed for a user to see the tasks and 
+    be able to add tasks or sort them. User can also use the sidebar
+    to navigate to other webpages.
+
+    Lydia Manu & Alison Ueki
+    4/30/2023
+-->
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My List</title>
+    <!-- CSS stylesheets for styling -->
     <link rel="stylesheet" href="main.css" />
-    <!-- Optional: CSS stylesheet for styling -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"  rel="stylesheet">
   </head>
+
   <body>
+    <!-- Header content goes here -->
     <header>
-      <!-- Header content goes here -->
       <div class="header">
         <h1>Lazy Track</h1>
       </div>
       <div class="user-profile">
         <img src="profile.png" alt="Profile picture" />
-        <span class="username">Username</span>
         <img src="notification.png" alt="Notification picture" />
+        <span class="username">Username</span>
       </div>
     </header>
-    <nav>
-      <!-- Navigation menu goes here -->
-    </nav>
+
+
+    <!-- Main content goes here -->
     <main>
-      <!-- Main content goes here -->
+      <!-- TASKS container -->
       <div class="tasks-container">
+        <!-- TOP SECTION for tasks -->
         <h2>All Tasks</h2>
         <div class="actions">
-          <button class="add-task-btn">Add</button>
+          <button class="add-task-btn" onclick="window.location.href='addAssignment.html'">Add</button>
           <div class="sort-by-dropdown">
             <button class="sort-by-btn">Sort By</button>
             <div class="dropdown-content">
@@ -39,6 +51,8 @@
             </div>
           </div>
         </div>
+
+        <!-- TASKS elements -->
         <section>
           <div class="container">
             <div class="todo">
@@ -73,42 +87,45 @@
             </div>
           </div>
         </section>
+        <!-- End of task elements -->
       </div>
+      <!-- End of task container div -->
     </main>
+    <!-- END OF MAIN content -->
+
+    <!-- Sidebar or additional content goes here -->
     <aside>
-      <!-- Sidebar or additional content goes here -->
       <button class="sidebar-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span class="material-icons-outlined">menu</span>
       </button>
       <div class="sidebar">
         <ul>
+          <li><a href="main.html">Home</a></li>
           <li><a href="#">Settings</a></li>
           <li><a href="#">Feedback</a></li>
-          <li><a href="#">Privacy</a></li>
-          <li><a href="#">Logout</a></li>
+          <li><a href="login.html">Logout</a></li>
         </ul>
       </div>
     </aside>
-    <footer>
-      <!-- Footer content goes here -->
-    </footer>
-    <script>
-      const sidebarToggle = document.querySelector(".sidebar-toggle");
-      const sidebar = document.querySelector(".sidebar");
 
-      sidebarToggle.addEventListener("click", () => {
-        sidebar.classList.toggle("hidden");
-      });
-      // Get the button and dropdown content elements
-      const dropdownBtn = document.querySelector(".sort-by-btn");
-      const dropdownContent = document.querySelector(".dropdown-content");
 
-      // Toggle the display of the dropdown content when the button is clicked
-      dropdownBtn.addEventListener("click", () => {
-        dropdownContent.classList.toggle("show");
-      });
-    </script>
   </body>
 </html>
+
+<!-- SCRIPT for the page-->
+<script>
+  const sidebarToggle = document.querySelector(".sidebar-toggle");
+  const sidebar = document.querySelector(".sidebar");
+
+  sidebarToggle.addEventListener("click", () => {
+    sidebar.classList.toggle("hidden");
+  });
+  // Get the button and dropdown content elements
+  const dropdownBtn = document.querySelector(".sort-by-btn");
+  const dropdownContent = document.querySelector(".dropdown-content");
+
+  // Toggle the display of the dropdown content when the button is clicked
+  dropdownBtn.addEventListener("click", () => {
+    dropdownContent.classList.toggle("show");
+  });
+</script>
