@@ -1,3 +1,12 @@
+<!--
+    addAssignment html document is designed for a user to input information 
+    to add a task. The information is the class name, assignment name,
+    estimated time, due date, and priority. Fields must be filled out before
+    it is added to the main.hmtl.
+
+    Lydia Manu & Alison Ueki
+    4/30/2023
+-->
 <!DOCTYPE html>
 <html>
   <head>
@@ -5,10 +14,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add Assignment</title>
+    <!-- CSS stylesheets for styling -->
     <link rel="stylesheet" href="addAssignment.css" />
-    <!-- Optional: CSS stylesheet for styling -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"  rel="stylesheet">
   </head>
   <body>
+
     <header>
       <!-- Header content goes here -->
       <div class="header">
@@ -16,17 +27,16 @@
       </div>
       <div class="user-profile">
         <img src="profile.png" alt="Profile picture" />
-        <span class="username">Username</span>
         <img src="notification.png" alt="Notification picture" />
+        <span class="username">Username</span>
       </div>
     </header>
-    <nav>
-      <!-- Navigation menu goes here -->
-    </nav>
+
     <main>
       <!-- Main content goes here -->
       <div class="add-assignment">
         <h2>Add Assignment</h2>
+        <!-- Start of form -->
         <form>
           <input
             type="text"
@@ -63,34 +73,34 @@
 
           <input type="submit" value="Add" />
         </form>
+        <!-- End of form -->
       </div>
     </main>
+    
+    <!-- Sidebar or additional content goes here -->
     <aside>
-      <!-- Sidebar or additional content goes here -->
       <button class="sidebar-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span class="material-icons-outlined">menu</span>
       </button>
       <div class="sidebar">
         <ul>
+          <li><a href="main.html">Home</a></li>
           <li><a href="#">Settings</a></li>
           <li><a href="#">Feedback</a></li>
-          <li><a href="#">Privacy</a></li>
-          <li><a href="#">Logout</a></li>
+          <li><a href="login.html">Logout</a></li>
         </ul>
       </div>
     </aside>
-    <footer>
-      <!-- Footer content goes here -->
-    </footer>
-    <script>
-      const sidebarToggle = document.querySelector(".sidebar-toggle");
-      const sidebar = document.querySelector(".sidebar");
 
-      sidebarToggle.addEventListener("click", () => {
-        sidebar.classList.toggle("hidden");
-      });
-    </script>
   </body>
 </html>
+
+<!-- SCRIPT for the page-->
+<script>
+  const sidebarToggle = document.querySelector(".sidebar-toggle");
+  const sidebar = document.querySelector(".sidebar");
+
+  sidebarToggle.addEventListener("click", () => {
+    sidebar.classList.toggle("hidden");
+  });
+</script>
