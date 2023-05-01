@@ -24,8 +24,7 @@
     display: none;
 }
   
-  /* Sidebar */
-  
+  /* Sidebar */ 
 .sidebar {
     position: fixed;
     top: 60px;
@@ -56,15 +55,14 @@
     background-color: #e0e0e0;
 }
   
-/* Top header */
-  
+/* Top header */ 
 .header {
     height: 60px;
     background-color: #f2f2f2;
     color: #333;
     display: flex;
     justify-content: center;
-   align-items: center;
+    align-items: center;
 }
   
 .header h1 {
@@ -72,9 +70,39 @@
     font-size: 24px;
     color: #333;
 }
+
+.tasks-container {
+    position: relative;
+    padding-top: 50px;
+}
   
-/* User profile */
+h2 {
+    position: absolute;
+    top: 0;
+    margin-left: 30%;
+    margin-right: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
   
+.add-button {
+    background-color: #7a7a7a;
+    border: none;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+  
+/* User profile */ 
 .user-profile {
     position: fixed;
     top: 0;
@@ -95,52 +123,111 @@
     margin-left: 10px;
 }
   
+.username {
+    font-weight: bold;
+}
 
 body {
     background-color: #e6eBed;
-  }
+}
   
-  .container {
-    margin: 50px auto;
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .todo {
+.container {
+    margin: 0 auto;
+    max-width: 800px;
+}
+ 
+.todo {
     display: flex;
     align-items: center;
     background-color: #fff;
     border-radius: 5px;
     margin: 10px 0;
     padding: 20px;
-  }
+    margin-left: 200px;
+}
   
-  .todo .checkbox {
+.todo .checkbox {
     margin-right: 20px;
-  }
+}
   
-  .todo .details {
+.todo .details {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     flex: 1;
-  }
+}
   
-  .todo .details .name {
+.todo .details .name {
     font-weight: bold;
     margin-right: 20px;
-  }
+}
   
-  .todo .details .time {
+.todo .details .time {
     margin-right: 20px;
-  }
+}
   
-  .todo .details .duedate {
+.todo .details .duedate {
     margin-right: 20px;
-  }
+}
   
-  .todo .details .priority {
+.todo .details .priority {
     font-weight: bold;
-  }
+}  
+
+.tasks-container {
+    position: relative;
+    padding-top: 70px; 
+    padding-bottom: 20px; 
+}
+ 
+.actions {
+    position: absolute;
+    top: 0;
+    right: 100px;
+    margin-top: 25px; 
+    display: flex;
+    align-items: center;
+}
+  
+.add-task-btn {
+    margin-right: 10px;
+}
+  
+.sort-by-dropdown {
+    position: relative;
+}
+  
+.sort-by-btn {
+    background-color: #ddd;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.dropdown-content {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: #f1f1f1;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    display: none;
+}
+  
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+  
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+  
+.sort-by-dropdown:hover .dropdown-content {
+    display: block;
+}
