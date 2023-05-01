@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Assignment</title>
+    <link rel="stylesheet" href="addAssignment.css" />
+    <!-- Optional: CSS stylesheet for styling -->
+  </head>
+  <body>
+    <header>
+      <!-- Header content goes here -->
+      <div class="header">
+        <h1>Lazy Track</h1>
+      </div>
+      <div class="user-profile">
+        <img src="profile.png" alt="Profile picture" />
+        <span class="username">Username</span>
+        <img src="notification.png" alt="Notification picture" />
+      </div>
+    </header>
+    <nav>
+      <!-- Navigation menu goes here -->
+    </nav>
+    <main>
+      <!-- Main content goes here -->
+      <div class="add-assignment">
+        <h2>Add Assignment</h2>
+        <form>
+          <input
+            type="text"
+            id="class-name"
+            name="class-name"
+            placeholder="Class Name"
+            required
+          />
+          <input
+            type="text"
+            id="assignment-name"
+            name="assignment-name"
+            placeholder="Assignment Name"
+            required
+          />
+
+          <input
+            type="number"
+            id="estimated-time"
+            name="estimated-time"
+            placeholder="Estimated Time"
+            min="0"
+            required
+          />
+          <label for="due-date">Due Date:</label>
+          <input type="date" id="due-date" name="due-date" required />
+
+          <select id="priority" name="priority" required>
+            <option value="" disabled selected hidden>Priority</option>
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+          </select>
+
+          <input type="submit" value="Add" />
+        </form>
+      </div>
+    </main>
+    <aside>
+      <!-- Sidebar or additional content goes here -->
+      <button class="sidebar-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="sidebar">
+        <ul>
+          <li><a href="#">Settings</a></li>
+          <li><a href="#">Feedback</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </div>
+    </aside>
+    <footer>
+      <!-- Footer content goes here -->
+    </footer>
+    <script>
+      const sidebarToggle = document.querySelector(".sidebar-toggle");
+      const sidebar = document.querySelector(".sidebar");
+
+      sidebarToggle.addEventListener("click", () => {
+        sidebar.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
