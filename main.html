@@ -15,9 +15,9 @@
         <h1>Lazy Track</h1>
       </div>
       <div class="user-profile">
-        <span class="notification-icon"></span>
         <img src="profile.png" alt="Profile picture" />
         <span class="username">Username</span>
+        <img src="notification.png" alt="Notification picture" />
       </div>
     </header>
     <nav>
@@ -25,24 +25,71 @@
     </nav>
     <main>
       <!-- Main content goes here -->
+      <div class="tasks-container">
+        <h2>All Tasks</h2>
+        <div class="actions">
+          <button class="add-task-btn">Add</button>
+          <div class="sort-by-dropdown">
+            <button class="sort-by-btn">Sort By</button>
+            <div class="dropdown-content">
+              <a href="#">Class</a>
+              <a href="#">Due Dates</a>
+              <a href="#">Priority</a>
+              <a href="#">Time</a>
+            </div>
+          </div>
+        </div>
+        <section>
+          <div class="container">
+            <div class="todo">
+              <div class="checkbox"><input type="checkbox" /></div>
+              <div class="details">
+                <div class="classname">COM 120</div>
+                <div class="name">Chapter 13 Reading</div>
+                <div class="time">1.5 hours</div>
+                <div class="duedate">3/4/2023</div>
+                <div class="priority">High Priority</div>
+              </div>
+            </div>
+            <div class="todo">
+              <div class="checkbox"><input type="checkbox" /></div>
+              <div class="details">
+                <div class="classname">Math 32</div>
+                <div class="name">Homework Exercises</div>
+                <div class="time">1 hours</div>
+                <div class="duedate">3/8/2023</div>
+                <div class="priority">Medium Priority</div>
+              </div>
+            </div>
+            <div class="todo">
+              <div class="checkbox"><input type="checkbox" /></div>
+              <div class="details">
+                <div class="classname">CSSE 123</div>
+                <div class="name">Study Midterm</div>
+                <div class="time">2 hours</div>
+                <div class="duedate">3/3/2023</div>
+                <div class="priority">High Priority</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
     <aside>
       <!-- Sidebar or additional content goes here -->
-      <aside>
-        <button class="sidebar-toggle">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <div class="sidebar">
-          <ul>
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">Feedback</a></li>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Logout</a></li>
-          </ul>
-        </div>
-      </aside>
+      <button class="sidebar-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="sidebar">
+        <ul>
+          <li><a href="#">Settings</a></li>
+          <li><a href="#">Feedback</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </div>
     </aside>
     <footer>
       <!-- Footer content goes here -->
@@ -54,38 +101,14 @@
       sidebarToggle.addEventListener("click", () => {
         sidebar.classList.toggle("hidden");
       });
+      // Get the button and dropdown content elements
+      const dropdownBtn = document.querySelector(".sort-by-btn");
+      const dropdownContent = document.querySelector(".dropdown-content");
+
+      // Toggle the display of the dropdown content when the button is clicked
+      dropdownBtn.addEventListener("click", () => {
+        dropdownContent.classList.toggle("show");
+      });
     </script>
-    <div class="container">
-      <div class="todo">
-        <div class="checkbox"><input type="checkbox" /></div>
-        <div class="details">
-          <div class="classname">COM 120</div>
-          <div class="name">Chapter 13 Reading</div>
-          <div class="time">1.5 hours</div>
-          <div class="duedate">3/4/2023</div>
-          <div class="priority">High Priority</div>
-        </div>
-      </div>
-      <div class="todo">
-        <div class="checkbox"><input type="checkbox" /></div>
-        <div class="details">
-          <div class="classname">Math 32</div>
-          <div class="name">Homework Exercises</div>
-          <div class="time">1 hours</div>
-          <div class="duedate">3/8/2023</div>
-          <div class="priority">Medium Priority</div>
-        </div>
-      </div>
-      <div class="todo">
-        <div class="checkbox"><input type="checkbox" /></div>
-        <div class="details">
-          <div class="classname">CSSE 123</div>
-          <div class="name">Study Midterm</div>
-          <div class="time">2 hour</div>
-          <div class="duedate">3/3/2023</div>
-          <div class="priority">High Priority</div>
-        </div>
-      </div>
-    </div>
   </body>
 </html>
